@@ -11,8 +11,9 @@ function sortByAgeAscending() {
 
     const [name, age] = input.split(" ");
     const newPerson = {
-      name, //because property and value are the same
-      age: parseInt(age),
+      name,
+      //if string couldn't be parsed into string properly it wouldn't return NAN anymore
+      age: isNaN(parseInt(age)) ? 0 : parseInt(age),
     };
     people.push(newPerson);
   }
