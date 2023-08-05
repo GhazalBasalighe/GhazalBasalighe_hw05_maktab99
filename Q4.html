@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+  </head>
+
+  <body>
+    <script>
+      function showNotification (Message) {
+        const notification = document.createElement("div");
+        notification.innerHTML = Message.html || "Default message";
+
+        notification.style.position = "fixed";
+        notification.style.top = Message.top ? `${Message.top}px` : "auto";
+        notification.style.right = Message.right ? `${Message.right}px` : "auto";
+        notification.style.backgroundColor = Message.backgroundColor || "lightblue";
+        notification.style.color = Message.color || "white";
+        notification.className = `notification-${Message.className || ""}`;
+        // console.log(notification.className);
+
+        document.body.appendChild(notification);
+
+        //if timeout not defined , will be removed after 5secs by default
+        setTimeout(() => {
+          notification.remove();
+        }, Message.timeout || 5000);
+      }
+
+      // Example usage
+      showNotification({
+        top: 70,
+        right: 70,
+        html: "This is test notification",
+        className: "test",
+        backgroundColor: "green",
+        color: "black",
+        timeout: 1000
+      });
+      showNotification({
+        top: 10,
+        right: 10,
+        html: "hello",
+        className: "welcome"
+      });
+
+    </script>
+  </body>
+
+</html>
