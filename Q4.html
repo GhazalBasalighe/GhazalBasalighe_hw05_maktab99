@@ -6,6 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question 4</title>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+
+        to {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -19,6 +40,7 @@
         notification.style.right = Message.right ? `${Message.right}px` : "auto";
         notification.style.backgroundColor = Message.backgroundColor || "lightblue";
         notification.style.color = Message.color || "white";
+        notification.style.animation = "fadeIn 0.5s";
         notification.className = `notification-${Message.className || ""}`;
         // console.log(notification.className);
 
@@ -26,7 +48,10 @@
 
         //if timeout not defined , will be removed after 5secs by default
         setTimeout(() => {
-          notification.remove();
+          notification.style.animation = "fadeOut 0.5s"; // Apply fadeOut animation
+          removeWithAnimation(() => {
+            notification.remove(); // Remove after fadeOut animation completes
+          }, 500); // This timeout matches the duration of the fadeOut animation
         }, Message.timeout || 5000);
       }
 
