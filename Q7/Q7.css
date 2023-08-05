@@ -1,0 +1,65 @@
+body
+{
+    background-color: rgb(243, 132, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    color: rgba(255, 255, 255, 0.949);
+}
+
+.container
+{
+    background-color: rgb(171, 88, 206);
+    border-radius: 24px;
+    margin: 10rem auto;
+    width: 28%;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+.profile-picture
+{
+    border-radius: 50%;
+    width: 60px;
+    height: 55px;
+    border: 5px solid white;
+}
+
+.developer
+{
+    margin: 30px 0 0 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.257)
+}
+
+.name
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 4px 0;
+    font-size: 27px;
+}
+
+.explanation
+{
+    color: rgba(255, 255, 255, 0.851);
+}
+
+.social-media
+{
+    margin-top: 25px
+}
+
+.social-media-circles
+{
+    border-radius: 50%;
+    width: 40px;
+}
+
+.center-circle
+{
+    margin: 0 6px;
+}
