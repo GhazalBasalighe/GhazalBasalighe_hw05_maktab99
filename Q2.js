@@ -1,18 +1,18 @@
 let stepCounter = {
   steps: 0,
-  increase: function increase() {
+  increase() {
     this.steps++;
     return this;
   },
-  decrease: function decrease() {
+  decrease() {
     this.steps--;
     return this;
   },
-  reset: function reset() {
+  reset() {
     this.steps = 0;
     return this;
   },
-  read: function read() {
+  read() {
     console.log(`steps: ${this.steps}`);
     return this;
   },
