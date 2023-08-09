@@ -64,7 +64,6 @@ svg
     width: 18rem;
 }
 
-
 .rememberMe-section
 {
     color: rgba(255, 255, 255, 0.933);
@@ -106,4 +105,10 @@ button
     margin-bottom: -70px;
     color: rgba(255, 255, 255, 0.933);
     font-size: x-small;
+    text-decoration: none;
+}
+
+.forgotPassword:hover
+{
+    color: #ccc;
 }
