@@ -5,7 +5,9 @@ let stepCounter = {
     return this;
   },
   decrease() {
-    this.steps--;
+    if (this.steps > 0) {
+      this.steps--;
+    }
     return this;
   },
   reset() {
